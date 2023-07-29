@@ -1,0 +1,37 @@
+@primary_clr:#f0a629;
+@label_clr: @primary_clr;
+@btn_bk_clr: @primary_clr;
+@btn_bk_clr-hover: #e09210;
+@input_area_clr:#F8F8F8;
+
+& when (@media-common = true) {
+    .collection_items_form {
+        margin-top:40px;
+
+        .collection_items_label {
+            color: @label_clr;
+            font-size: 1.6rem;
+        }
+
+        .collection_items_input{
+            background: @input_area_clr;
+            border:0;
+            outline:none;
+        }
+
+        .collection_items_input:hover{
+            outline:none;
+        }
+
+        .collection_items_btn{
+            background: @btn_bk_clr;
+            padding:@indent__s @indent__xl;
+            border:0;
+            outline:none;
+        }
+
+        .collection_items_btn:hover{
+            background: @btn_bk_clr-hover;
+        }
+    }
+}
