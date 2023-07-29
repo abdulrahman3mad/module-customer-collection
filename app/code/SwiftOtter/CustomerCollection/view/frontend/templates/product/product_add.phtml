@@ -1,0 +1,25 @@
+<?php
+/**
+ * @category    SwiftOtter
+ * @author      Abdelrahman Emad <abdulrahman3mad@gmail.com
+ * @license     http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
+ */
+
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+/** @var SwiftOtter\CustomerCollection\ViewModel\Product\View\CollectionAdd $viewModel */
+$viewModel = $block->getData("viewModel");
+?>
+
+<form class="collection_items_form">
+    <div class="field required">
+        <label id="collection_items_input" class="collection_items_label label"><?=$escaper->escapeHtml(__("Add to collection"))?></label>
+        <div class="control">
+            <textarea id="collection_items_input" class="input-text" placeholder="<?=$escaper->escapeHtml(__("very good product"))?>"></textarea>
+        </div>
+    </div>
+    <button type="submit" class="collection_items_btn action submit primary"><?=$escaper->escapeHtml(__("Add"))?></button>
+</form>
