@@ -11,15 +11,18 @@
  */
 
 /** @var SwiftOtter\CustomerCollection\ViewModel\Product\View\CollectionAdd $viewModel */
-$viewModel = $block->getData("viewModel");
+$viewModel = $block->getData("view_model");
 ?>
 
-<form class="collection_items_form">
-    <div class="field required">
-        <label id="collection_items_input" class="collection_items_label label"><?=$escaper->escapeHtml(__("Add to collection"))?></label>
-        <div class="control">
-            <textarea id="collection_items_input" class="collection_items_input input-text" placeholder="<?=$escaper->escapeHtml(__("very good product"))?>"></textarea>
+<?php if($viewModel->customerIsLoggedIn()): ?>
+    <form class="collection_items_form" method="post" action="<?= $escaper->escapeHtmlAttr($viewModel->getActionUrl()) ?>">
+        <input type="hidden" name="product_id" value="<?= $escaper->escapeHtmlAttr($viewModel->getProductId()) ?>"/>
+        <div class="field required">
+            <label id="collection_items_input" class="collection_items_label label"><?=$escaper->escapeHtml(__("Add to collection"))?></label>
+            <div class="control">
+                <textarea id="collection_items_input" name="comment" class="collection_items_input input-text" placeholder="<?=$escaper->escapeHtml(__("very good product"))?>"></textarea>
+            </div>
         </div>
-    </div>
-    <button type="submit" class="collection_items_btn action submit primary"><?=$escaper->escapeHtml(__("Add"))?></button>
-</form>
+        <button type="submit" class="collection_items_btn action submit primary"><?=$escaper->escapeHtml(__("Add"))?></button>
+    </form>
+<?php endif; ?>
