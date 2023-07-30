@@ -12,6 +12,7 @@ use SwiftOtter\CustomerCollection\Api\Data\CollectionItemInterfaceFactory;
 use SwiftOtter\CustomerCollection\Api\Data\CollectionItemInterface;
 use SwiftOtter\CustomerCollection\Model\CollectionItem;
 use Magento\Customer\Model\Session;
+
 class InitCollectionItem
 {
     /**

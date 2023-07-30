@@ -15,11 +15,22 @@ use Magento\Framework\Api\SearchCriteriaBuilder;
 
 class CachedProductsLoader
 {
+    /**
+     * @var array|null
+     */
     private ?array $products = null;
-
+    /**
+     * @var ProductRepositoryInterface
+     */
     private ProductRepositoryInterface $productRepository;
+    /**
+     * @var SearchCriteriaBuilder
+     */
     private SearchCriteriaBuilder $searchCriteriaBuilder;
-
+    /**
+     * @param ProductRepositoryInterface $productRepository
+     * @param SearchCriteriaBuilder $searchCriteriaBuilder
+     */
     public function __construct(
         ProductRepositoryInterface $productRepository,
         SearchCriteriaBuilder $searchCriteriaBuilder
@@ -28,6 +39,10 @@ class CachedProductsLoader
         $this->searchCriteriaBuilder = $searchCriteriaBuilder;
     }
 
+    /**
+     * @param array $productIds
+     * @return void
+     */
     public function init(array $productIds): void
     {
         if ($this->products !== null) {
