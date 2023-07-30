@@ -18,11 +18,11 @@ $viewModel = $block->getData("view_model");
     <form class="collection_items_form" data-mage-init='{"validation":{}}' method="post" action="<?= $escaper->escapeHtmlAttr($viewModel->getActionUrl()) ?>">
         <input type="hidden" name="product_id" value="<?= $escaper->escapeHtmlAttr($viewModel->getProductId()) ?>"/>
             <div class="field required">
-                <label id="collection_items_input" class="collection_items_label label"><?=$escaper->escapeHtml(__("Add to collection"))?></label>
+                <label id="collection_items_input" class="collection_items_label label"><?=$escaper->escapeHtml(__("Add to your collection"))?></label>
                 <div class="control">
-                    <textarea id="collection_items_input" data-validate='{"required": true}' name="comment" class="collection_items_input input-text" placeholder="<?=$escaper->escapeHtml(__("very good product"))?>"></textarea>
+                    <textarea id="collection_items_input" data-validate='{"required": true}' name="comment" class="collection_items_input input-text" placeholder="<?=$escaper->escapeHtml(__("Leave a comment.."))?>"></textarea>
                 </div>
             </div>
-        <button type="submit" class="collection_items_btn action submit primary"><?=$escaper->escapeHtml(__("Add"))?></button>
+        <button type="submit" class="collection_items_btn submit"><?=$escaper->escapeHtml(__("Add"))?></button>
     </form>
 <?php endif; ?>

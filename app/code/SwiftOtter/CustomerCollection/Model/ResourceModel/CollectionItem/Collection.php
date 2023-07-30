@@ -22,4 +22,10 @@ class Collection extends AbstractCollection
             CollectionItemResource::class
         );
     }
+
+    public function addUserToFilter(string $customer_id): Collection
+    {
+        $this->addFieldToFilter("customer_id", $customer_id);
+        return $this;
+    }
 }

@@ -10,7 +10,6 @@ use Magento\Framework\Exception\InputException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Psr\Log\LoggerInterface;
 use SwiftOtter\CustomerCollection\Api\Data\CollectionItemInterface;
-
 class ValidateCollectionItem
 {
     private const KEY_COMMENT = "comment";

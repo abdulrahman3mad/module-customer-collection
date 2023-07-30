@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @category    SwiftOtter
+ * @author      Abdelrahman Emad <abdulrahman3mad@gmail.com
+ * @license     http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
+ */
 declare(strict_types=1);
 
 namespace SwiftOtter\CustomerCollection\Command;
@@ -8,7 +12,6 @@ use SwiftOtter\CustomerCollection\Api\Data\CollectionItemInterfaceFactory;
 use SwiftOtter\CustomerCollection\Api\Data\CollectionItemInterface;
 use SwiftOtter\CustomerCollection\Model\CollectionItem;
 use Magento\Customer\Model\Session;
-
 class InitCollectionItem
 {
     /**
