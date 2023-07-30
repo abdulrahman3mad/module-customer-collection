@@ -5,23 +5,28 @@
 @input_area_clr:#F8F8F8;
 
 & when (@media-common = true) {
+
+    // Start Product Page styles
     .collection_items_form {
         margin-top:40px;
 
         .collection_items_label {
             color: @label_clr;
             font-size: 1.6rem;
+            margin-bottom:10px
         }
 
         .collection_items_input{
+            margin-top:10px;
             background: @input_area_clr;
             border:0;
             outline:none;
         }
 
-        .collection_items_input:active{
+        .collection_items_input:focus{
             outline:none;
             border:1px solid @primary_clr;
+            box-shadow:none;
         }
 
         .collection_items_btn{
@@ -29,10 +34,41 @@
             padding:@indent__s @indent__xl;
             border:0;
             outline:none;
+            color:white;
         }
 
         .collection_items_btn:hover{
             background: @btn_bk_clr-hover;
+            border:0;
+        }
+    }
+    // End Product Page styles
+
+    // Start My Account styles
+    .customer_collection {
+        .message.info {
+            span {
+                .lib-icon-font(
+                    @_icon-font-content: @icon-warning,
+                    @_icon-font-size: 16px
+                )
+            }
+        }
+
+        .collection_item {
+            margin-bottom: 23px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 40%;
+            background: #F5F5F5;
+            padding: 26px;
+            box-shadow: 4px 4px lightgray;
+
+            .collection_item_comment, .collection_item_product_name {
+                color: green;
+                font-weight: bold;
+            }
         }
     }
 }
