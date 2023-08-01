@@ -11,6 +11,7 @@
     <module name="SwiftOtter_CustomerCollection">
         <sequence>
             <module name="Magento_Catalog" />
+            <module name="Magento_Customer" />
         </sequence>
     </module>
 </config>
